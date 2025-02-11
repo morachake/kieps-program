@@ -1,151 +1,62 @@
-Module 1: SEE 100 - Foundations of Modern Software Development
-Week 1: Getting Started with Development
-This week introduces students to the fundamental concepts of software development. Students will learn:
+# Modern Software Development Course 🚀
 
-Basic concepts of how software works and how different parts of applications communicate
-Installing and configuring VS Code with helpful extensions for beginners
-Understanding basic terminal commands (cd, ls, mkdir) with practical exercises
-Learning to navigate development environments without feeling overwhelmed
-Simple exercises to build confidence in using development tools
+Welcome to the **Modern Software Development Course**! This repository contains structured learning modules covering **web and mobile development**, **backend engineering**, and **modern development practices**.
 
-Week 2: Version Control Fundamentals
-Version control is introduced in a beginner-friendly way:
+---
 
-Understanding why we need version control through real examples
-Learning Git through visual interfaces first (GitHub Desktop)
-Practicing basic Git workflows with simple projects
-Creating repositories and understanding commit messages
-Learning to collaborate with others through pull requests
-Resolving simple conflicts in a safe environment
+modern-software-dev/
+├── modules/            # Course modules
+│   ├── module-1/
+│   │   ├── week-1/
+│   │   ├── week-2/
+│   └── ...
+├── assignments/       # Assignment guidelines
+├── resources/        # Setup and reference materials
+└── examples/        # Sample projects and exercises
 
-Week 3: Modern Development Practices
-Introduction to modern development workflows through practical examples:
 
-Understanding automated processes through simple GitHub Actions
-Creating a basic automated testing workflow
-Learning what Docker is through real-world analogies
-Setting up simple containers with pre-built images
-Understanding why automation is important in modern development
-Basic testing concepts with practical exercises
+## 📌 Course Structure
 
-Week 4: Cloud & Development Concepts
-Making cloud computing accessible to beginners:
+### **Module 1: Foundations of Modern Software Development**
+- Development environment setup
+- Version control basics
+- Modern development practices
+- Cloud computing fundamentals
+- Full-stack development introduction
 
-Understanding cloud services through everyday examples
-Creating free-tier accounts on cloud platforms
-Deploying simple static websites to cloud services
-Learning Agile concepts through practical team exercises
-Understanding sprint planning with real project examples
-Using tools like Trello or GitHub Projects for task management
+### **Module 2: Web Development Fundamentals**
+- HTML5 & CSS3 basics
+- JavaScript essentials
+- React & Vue.js foundations
+- Advanced framework concepts
+- Web deployment & optimization
 
-Week 5: Introduction to Full-Stack
-Bridging frontend and backend concepts:
+### **Module 3: Mobile Development**
+- React Native basics
+- Mobile UI development
+- Data management
+- Advanced mobile features
+- App deployment
 
-Understanding how frontend and backend work together
-Building simple React components that display data
-Creating basic Django views and models
-Understanding API concepts through real-world examples
-Connecting frontend and backend in simple applications
-Building a small full-stack application step by step
+### **Module 4: Backend & API Development**
+- Python and Django basics
+- REST API design
+- Authentication & security
+- Database management
+- Deployment & scaling
 
-Module 2: SEE 101 - Web Development Fundamentals
-Week 1: Web Basics
-Starting with the building blocks of web development:
+---
 
-Creating structured HTML pages from scratch
-Understanding semantic HTML elements
-Styling pages with CSS fundamentals
-Learning layout concepts through practical examples
-Building responsive designs with simple CSS
-Understanding the box model through visual examples
+## 🛠 **Getting Started**
+ **Clone the repository**:
+   ```bash
+   git clone [repository-url]
+🔗 Prerequisites
+Before starting, make sure you have the following installed:
 
-Week 2: JavaScript Essentials
-Making JavaScript approachable for beginners:
-
-Learning JavaScript through interactive exercises
-Understanding variables and functions with real examples
-Manipulating web pages with simple DOM operations
-Handling user events (clicks, input, etc.)
-Working with arrays and objects in practical scenarios
-Building interactive features from scratch
-
-Week 3: Framework Introduction
-Gentle introduction to modern frameworks:
-
-Understanding why we use frameworks
-Building basic React components
-Learning Vue.js fundamentals
-Understanding component-based architecture
-Managing component state
-Handling user input in frameworks
-
-Week 4: Framework Development
-Expanding framework knowledge with practical applications:
-
-Building reusable components
-Managing application state
-Implementing navigation
-Handling forms and user input
-Making API calls
-Error handling and loading states
-
-Week 5: Practical Web Development
-Applying learned concepts to real projects:
-
-Building a complete web application
-Implementing CRUD operations
-Managing application state
-Deploying applications to hosting platforms
-Basic security considerations
-Testing and debugging applications
-
-Module 3: SEE 102 - Mobile Development Foundations
-Week 1: Mobile Development Basics
-Introduction to mobile development concepts:
-
-Understanding mobile app architecture
-Setting up React Native development environment
-Learning mobile-specific components
-Understanding mobile design patterns
-Building your first mobile screens
-Testing on simulators and devices
-
-Week 2: Mobile UI Development
-Focus on creating user-friendly mobile interfaces:
-
-Implementing mobile-specific layouts
-Understanding touch interactions
-Building custom components
-Implementing navigation patterns
-Handling different screen sizes
-Creating responsive mobile layouts
-
-Week 3: Working with Data
-Managing data in mobile applications:
-
-Storing data locally on devices
-Making API calls from mobile apps
-Handling offline scenarios
-Implementing user authentication
-Managing user sessions
-Handling form data
-
-Week 4: Advanced Mobile Features
-Exploring mobile-specific functionality:
-
-Accessing device features (camera, location)
-Implementing push notifications
-Managing application state
-Handling background tasks
-Implementing offline support
-Performance optimization basics
-
-Week 5: Completing Your Mobile App
-Bringing everything together:
-
-Building a complete mobile application
-Implementing all learned features
-Testing on multiple devices
-Preparing for app store submission
-Optimizing app performance
-Creating app documentation
+VS Code (or any text editor)
+Git for version control
+Node.js & npm for frontend development
+Python & Django for backend development
+Docker (optional but recommended)
+For installation guides, check the resources/setup-guide.md.
