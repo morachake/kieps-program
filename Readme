@@ -1,133 +1,151 @@
-Module 1: SEE 100 - Modern Software Development Environment
+Module 1: SEE 100 - Foundations of Modern Software Development
+Week 1: Getting Started with Development
+This week introduces students to the fundamental concepts of software development. Students will learn:
 
-Week 1: Overview of Modern Software Development
+Basic concepts of how software works and how different parts of applications communicate
+Installing and configuring VS Code with helpful extensions for beginners
+Understanding basic terminal commands (cd, ls, mkdir) with practical exercises
+Learning to navigate development environments without feeling overwhelmed
+Simple exercises to build confidence in using development tools
 
-Evolution of Software Development
-Modern Development Practices and Tools
-Integrated Development Environments (IDEs)
-Features of Modern IDEs
-Comparison of Popular IDEs (e.g., Visual Studio Code, WebStorm)
-Week 2: Version Control Systems
+Week 2: Version Control Fundamentals
+Version control is introduced in a beginner-friendly way:
 
-Advanced Use of Git
-Collaborative Features of GitHub, GitLab
-Code Quality and Review Practices
-Code Review Techniques
-Static Code Analysis Tools
-Conducting Code Reviews
-Using Static Analysis Tools
-Week 3: Continuous Integration and Continuous Deployment (CI/CD)
+Understanding why we need version control through real examples
+Learning Git through visual interfaces first (GitHub Desktop)
+Practicing basic Git workflows with simple projects
+Creating repositories and understanding commit messages
+Learning to collaborate with others through pull requests
+Resolving simple conflicts in a safe environment
 
-CI/CD Pipelines
-GitHub Actions, GitLab CI/CD
-Setting Up a CI/CD Pipeline
-Containerization and Virtualization
-Docker, Kubernetes
-Creating and Managing Containers
-Setting Up a Kubernetes Cluster
-Week 4: Cloud Computing and Cloud-Based Development
+Week 3: Modern Development Practices
+Introduction to modern development workflows through practical examples:
 
-Overview of Cloud Platforms (AWS, Azure, Google Cloud)
-Cloud Development Models
-Deploying Applications on Cloud Platforms
-Agile and DevOps Practices
-Agile Methodologies
-DevOps Culture and Practices
-Implementing Agile and DevOps in Project Management
-Week 5: Full-Stack Development Workflow
+Understanding automated processes through simple GitHub Actions
+Creating a basic automated testing workflow
+Learning what Docker is through real-world analogies
+Setting up simple containers with pre-built images
+Understanding why automation is important in modern development
+Basic testing concepts with practical exercises
 
-Modern Front-End Frameworks
-Introduction to React & Vue.js
-Choosing Between React and Vue
-Setting Up a Simple Frontend Project
-Backend Development and APIs with Django
-RESTful APIs using Django REST Framework
-Microservices Architecture
-Developing a Backend Service
-Database Technologies
-SQL vs. NoSQL
-Database Management Systems (e.g., PostgreSQL, MySQL, MongoDB)
-Full-Stack Application Development
-Connecting React/Vue Frontend with Django Backend
-Module 2: SEE 101 - Web Development (React & Vue)
+Week 4: Cloud & Development Concepts
+Making cloud computing accessible to beginners:
 
-Week 1: Introduction to HTML5 & CSS3
+Understanding cloud services through everyday examples
+Creating free-tier accounts on cloud platforms
+Deploying simple static websites to cloud services
+Learning Agile concepts through practical team exercises
+Understanding sprint planning with real project examples
+Using tools like Trello or GitHub Projects for task management
 
-Basic Structure of a Web Page
-Tags, Elements, and Attributes
-Forms, Tables, Semantic HTML
-CSS Basics: Selectors, Box Model
-Layouts with Flexbox & CSS Grid
-Creating a Simple Web Page
-Week 2: JavaScript Fundamentals
+Week 5: Introduction to Full-Stack
+Bridging frontend and backend concepts:
 
-ES6+ Features
-Variables, Functions, Loops, Arrays
-The Document Object Model (DOM)
-Event Listeners and DOM Manipulation
-Fetch API and JSON
-AJAX and Asynchronous JavaScript
-Week 3: React & Vue.js Basics
+Understanding how frontend and backend work together
+Building simple React components that display data
+Creating basic Django views and models
+Understanding API concepts through real-world examples
+Connecting frontend and backend in simple applications
+Building a small full-stack application step by step
 
-Introduction to React.js
-JSX, Components, Props, State
-React Hooks (useState, useEffect)
-Introduction to Vue.js
-Vue Directives, Methods, Lifecycle Hooks
-Data Binding in Vue
-Setting Up a Project in React and Vue
-Week 4: Advanced React & Vue.js
+Module 2: SEE 101 - Web Development Fundamentals
+Week 1: Web Basics
+Starting with the building blocks of web development:
 
-State Management
-React Context API, Redux
-Vuex for State Management
-Routing in React (React Router)
-Routing in Vue (Vue Router)
-Consuming Django REST APIs in React/Vue
-Building a Full-Stack Web Application
-Week 5: Web Accessibility & Optimization
+Creating structured HTML pages from scratch
+Understanding semantic HTML elements
+Styling pages with CSS fundamentals
+Learning layout concepts through practical examples
+Building responsive designs with simple CSS
+Understanding the box model through visual examples
 
-Web Accessibility (ARIA, Best Practices)
-Performance Optimization (Lazy Loading, Caching)
-Progressive Web Apps (PWAs)
-Deploying a Web App
-Hosting on Netlify, Vercel, or Firebase
-Continuous Deployment with GitHub Actions
-Module 3: SEE 102 - Mobile App Development with React Native
+Week 2: JavaScript Essentials
+Making JavaScript approachable for beginners:
 
-Week 1: Introduction to React Native
+Learning JavaScript through interactive exercises
+Understanding variables and functions with real examples
+Manipulating web pages with simple DOM operations
+Handling user events (clicks, input, etc.)
+Working with arrays and objects in practical scenarios
+Building interactive features from scratch
 
-Why React Native for Mobile Development?
-Setting Up React Native with Expo and CLI
-Understanding React Native Components
-Building a Simple Mobile App
-Week 2: Advanced UI Development in React Native
+Week 3: Framework Introduction
+Gentle introduction to modern frameworks:
 
-Custom UI Components
-Navigation with React Navigation
-Styling with Styled Components and NativeBase
-Handling User Input and Forms
-Week 3: Networking and APIs in React Native
+Understanding why we use frameworks
+Building basic React components
+Learning Vue.js fundamentals
+Understanding component-based architecture
+Managing component state
+Handling user input in frameworks
 
-Fetching Data from Django REST APIs
-Handling Authentication (JWT, OAuth)
-Using Axios for API Calls
-Implementing Secure Storage
-Week 4: React Native State Management & Offline Support
+Week 4: Framework Development
+Expanding framework knowledge with practical applications:
 
-Redux Toolkit for State Management
-Async Storage for Persistent Data
-Offline-first Development and Data Sync
-Push Notifications with Firebase
-Week 5: Mobile App Deployment & Testing
+Building reusable components
+Managing application state
+Implementing navigation
+Handling forms and user input
+Making API calls
+Error handling and loading states
 
-Testing React Native Apps
-Unit Testing with Jest
-UI Testing with React Native Testing Library
-Preparing for Play Store and App Store Submission
-Final Mobile Project
-Final Project and Evaluation
+Week 5: Practical Web Development
+Applying learned concepts to real projects:
 
-Development of a Full-Stack Application with React/Vue (Frontend), Django (Backend), and React Native (Mobile)
-Real-world Project Simulation
-Deployment & Presentation
+Building a complete web application
+Implementing CRUD operations
+Managing application state
+Deploying applications to hosting platforms
+Basic security considerations
+Testing and debugging applications
+
+Module 3: SEE 102 - Mobile Development Foundations
+Week 1: Mobile Development Basics
+Introduction to mobile development concepts:
+
+Understanding mobile app architecture
+Setting up React Native development environment
+Learning mobile-specific components
+Understanding mobile design patterns
+Building your first mobile screens
+Testing on simulators and devices
+
+Week 2: Mobile UI Development
+Focus on creating user-friendly mobile interfaces:
+
+Implementing mobile-specific layouts
+Understanding touch interactions
+Building custom components
+Implementing navigation patterns
+Handling different screen sizes
+Creating responsive mobile layouts
+
+Week 3: Working with Data
+Managing data in mobile applications:
+
+Storing data locally on devices
+Making API calls from mobile apps
+Handling offline scenarios
+Implementing user authentication
+Managing user sessions
+Handling form data
+
+Week 4: Advanced Mobile Features
+Exploring mobile-specific functionality:
+
+Accessing device features (camera, location)
+Implementing push notifications
+Managing application state
+Handling background tasks
+Implementing offline support
+Performance optimization basics
+
+Week 5: Completing Your Mobile App
+Bringing everything together:
+
+Building a complete mobile application
+Implementing all learned features
+Testing on multiple devices
+Preparing for app store submission
+Optimizing app performance
+Creating app documentation
