@@ -1,156 +1,133 @@
-# SEE 100: Modern Software Development Environment
+Module 1: SEE 100 - Modern Software Development Environment
 
-## Week 1: Overview of Modern Software Development
-- **Evolution of Software Development**
-- **Modern Development Practices and Tools**
-- **Integrated Development Environments (IDEs)**
-  - Features of Modern IDEs
-  - Comparison of Popular IDEs (e.g., Visual Studio, IntelliJ IDEA)
+Week 1: Overview of Modern Software Development
 
-## Week 2: Version Control Systems
-- **Advanced Use of Git**
-- **Collaborative Features of GitHub, GitLab**
-- **Code Quality and Review Practices**
-  - Code Review Techniques
-  - Static Code Analysis Tools
-  - Coding Standards
-  - Conducting Code Reviews
-  - Using Static Analysis Tools
+Evolution of Software Development
+Modern Development Practices and Tools
+Integrated Development Environments (IDEs)
+Features of Modern IDEs
+Comparison of Popular IDEs (e.g., Visual Studio Code, WebStorm)
+Week 2: Version Control Systems
 
-## Week 3: Continuous Integration and Continuous Deployment (CI/CD)
-- **CI/CD Pipelines** (Jenkins, Travis CI, GitHub Actions)
-- **Setting Up a CI/CD Pipeline**
-- **Containerization and Virtualization**
-  - Docker, Kubernetes, Virtual Machines
-  - Creating and Managing Containers
-  - Setting Up a Kubernetes Cluster
+Advanced Use of Git
+Collaborative Features of GitHub, GitLab
+Code Quality and Review Practices
+Code Review Techniques
+Static Code Analysis Tools
+Conducting Code Reviews
+Using Static Analysis Tools
+Week 3: Continuous Integration and Continuous Deployment (CI/CD)
 
-## Week 4: Cloud Computing and Cloud-Based Development
-- **Overview of Cloud Platforms** (AWS, Azure, Google Cloud)
-- **Cloud Development Models**
-- **Deploying Applications on Cloud Platforms**
-- **Agile and DevOps Practices**
-  - Agile Methodologies
-  - DevOps Culture and Practices
-  - Implementing Agile and DevOps in Project Management
-- **Modern Front-End Technologies**
-  - Front-End Frameworks and Libraries (e.g., React, Angular, Vue.js)
-  - Building a Small Project Using a Modern Front-End Framework
+CI/CD Pipelines
+GitHub Actions, GitLab CI/CD
+Setting Up a CI/CD Pipeline
+Containerization and Virtualization
+Docker, Kubernetes
+Creating and Managing Containers
+Setting Up a Kubernetes Cluster
+Week 4: Cloud Computing and Cloud-Based Development
 
-## Week 5: Backend Development and APIs
-- **RESTful APIs, Microservices Architecture**
-- **Node.js, Python**
-- **Developing a Backend Service and API**
-- **Database Technologies**
-  - SQL vs. NoSQL
-  - Database Management Systems (e.g., MySQL, MongoDB)
-- **Task: Building a Full-Stack Application**
-  - Utilizing Modern Software Development Tools and Practices
-  - End-to-end development of a Full-Stack Application
+Overview of Cloud Platforms (AWS, Azure, Google Cloud)
+Cloud Development Models
+Deploying Applications on Cloud Platforms
+Agile and DevOps Practices
+Agile Methodologies
+DevOps Culture and Practices
+Implementing Agile and DevOps in Project Management
+Week 5: Full-Stack Development Workflow
 
----
+Modern Front-End Frameworks
+Introduction to React & Vue.js
+Choosing Between React and Vue
+Setting Up a Simple Frontend Project
+Backend Development and APIs with Django
+RESTful APIs using Django REST Framework
+Microservices Architecture
+Developing a Backend Service
+Database Technologies
+SQL vs. NoSQL
+Database Management Systems (e.g., PostgreSQL, MySQL, MongoDB)
+Full-Stack Application Development
+Connecting React/Vue Frontend with Django Backend
+Module 2: SEE 101 - Web Development (React & Vue)
 
-# SEE 101: Web Development
+Week 1: Introduction to HTML5 & CSS3
 
-## Week 1: Introduction to HTML5
-- **Basic Structure of a Web Page**
-  - Tags, Elements, and Attributes
-  - Creating a Simple HTML Page
-- **Advanced HTML5 Features**
-  - Forms, Tables, Semantic HTML
-  - Building a Contact Form
-- **Introduction to CSS3**
-  - Basics of CSS, Selectors, Box Model
-  - Styling HTML Page with CSS
+Basic Structure of a Web Page
+Tags, Elements, and Attributes
+Forms, Tables, Semantic HTML
+CSS Basics: Selectors, Box Model
+Layouts with Flexbox & CSS Grid
+Creating a Simple Web Page
+Week 2: JavaScript Fundamentals
 
-## Week 2: Advanced CSS3 Techniques
-- **Layouts, Flexbox, Grid System**
-  - Creating a Responsive Layout
-- **CSS3 Animations and Transitions**
-  - Animations, Transitions, Transformations
-  - Animating Web Elements
-- **Introduction to JavaScript**
-  - Syntax, Variables, Data Types
-  - Interactive JavaScript Exercises
+ES6+ Features
+Variables, Functions, Loops, Arrays
+The Document Object Model (DOM)
+Event Listeners and DOM Manipulation
+Fetch API and JSON
+AJAX and Asynchronous JavaScript
+Week 3: React & Vue.js Basics
 
-## Week 3: JavaScript Control Structures
-- **Loops, Conditionals, Functions**
-  - Building a Simple Calculator
-- **The Document Object Model (DOM)**
-  - DOM Manipulation, Event Listeners
-  - Creating Interactive Web Pages
-- **Advanced JavaScript Techniques**
-  - AJAX, Fetch API, JSON
-  - Working with External Data
-- **Introduction to Responsive Web Design**
-  - Media Queries, Mobile-First Design
-  - Building a Responsive Website
+Introduction to React.js
+JSX, Components, Props, State
+React Hooks (useState, useEffect)
+Introduction to Vue.js
+Vue Directives, Methods, Lifecycle Hooks
+Data Binding in Vue
+Setting Up a Project in React and Vue
+Week 4: Advanced React & Vue.js
 
-## Week 4: Web Accessibility
-- **Accessibility Principles, ARIA**
-  - Making a Website Accessible
-- **Web Performance Optimization**
-  - Page Speed, Optimization Techniques
-  - Analyzing and Optimizing a Web Page
-- **Version Control with Git and GitHub**
-  - Basics of Git, Repository Management
-  - Managing Web Projects with Git
-- **Introduction to Front-End Frameworks**
-  - Overview of Popular Frameworks (Bootstrap, React)
-  - Building a Sample Page with Bootstrap
+State Management
+React Context API, Redux
+Vuex for State Management
+Routing in React (React Router)
+Routing in Vue (Vue Router)
+Consuming Django REST APIs in React/Vue
+Building a Full-Stack Web Application
+Week 5: Web Accessibility & Optimization
 
-## Week 5: JavaScript Frameworks: React
-- **React Basics**
-  - Components, JSX
-  - Creating a Simple React Application
-- **Advanced React Techniques**
-  - State Management, Hooks
-  - Developing a Dynamic Web App
-- **Final Project Work**
-  - Applying All Learned Concepts
-  - Developing a Comprehensive Web Project
-- **Project Presentations and Course Wrap-Up**
-  - Presenting Final Projects
-  - Peer Review, Feedback Sessions
+Web Accessibility (ARIA, Best Practices)
+Performance Optimization (Lazy Loading, Caching)
+Progressive Web Apps (PWAs)
+Deploying a Web App
+Hosting on Netlify, Vercel, or Firebase
+Continuous Deployment with GitHub Actions
+Module 3: SEE 102 - Mobile App Development with React Native
 
----
+Week 1: Introduction to React Native
 
-# SEE 102: Mobile Application Design and Development
+Why React Native for Mobile Development?
+Setting Up React Native with Expo and CLI
+Understanding React Native Components
+Building a Simple Mobile App
+Week 2: Advanced UI Development in React Native
 
-## Week 1: Introduction to Mobile Development with React Native
-- **React Native Overview**
-- **Installing Expo and React Native CLI**
-- **Setting Up a Development Environment**
-- **Basic React Native Components**
-  - Views, Text, Buttons, Images
-  - Building a Simple Mobile App
+Custom UI Components
+Navigation with React Navigation
+Styling with Styled Components and NativeBase
+Handling User Input and Forms
+Week 3: Networking and APIs in React Native
 
-## Week 2: Advanced UI Development in React Native
-- **Custom Components and Styling**
-- **React Native Navigation**
-- **State Management with Context API and Redux**
-- **Designing a Complex User Interface**
+Fetching Data from Django REST APIs
+Handling Authentication (JWT, OAuth)
+Using Axios for API Calls
+Implementing Secure Storage
+Week 4: React Native State Management & Offline Support
 
-## Week 3: Networking and APIs in React Native
-- **RESTful APIs, JSON Parsing**
-- **Networking Libraries (Axios, Fetch API)**
-- **Integrating Third-Party APIs**
-- **Authentication and Authorization**
-  - Firebase Authentication
-  - JWT-based Authentication
+Redux Toolkit for State Management
+Async Storage for Persistent Data
+Offline-first Development and Data Sync
+Push Notifications with Firebase
+Week 5: Mobile App Deployment & Testing
 
-## Week 4: Testing and Debugging in React Native
-- **Unit Testing, UI Testing**
-- **Debugging Techniques**
-- **Using React Native Debugger and Flipper**
-- **Performance Optimization**
-  - Reducing Bundle Size
-  - Improving Rendering Performance
+Testing React Native Apps
+Unit Testing with Jest
+UI Testing with React Native Testing Library
+Preparing for Play Store and App Store Submission
+Final Mobile Project
+Final Project and Evaluation
 
-## Week 5: Final Project and Evaluation
-- **Development of a Comprehensive Mobile Application**
-- **Applying Concepts Learned**
-- **Final Project Development**
-- **Deploying React Native Apps**
-  - Expo Go and EAS Build
-  - Publishing to Google Play Store and Apple App Store**
+Development of a Full-Stack Application with React/Vue (Frontend), Django (Backend), and React Native (Mobile)
+Real-world Project Simulation
+Deployment & Presentation
