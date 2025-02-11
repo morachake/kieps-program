@@ -1,153 +1,156 @@
-I'll help you write the curriculum in markdown format, replacing Xamarin with React Native in the mobile development section. I'll maintain the same flow while making this adjustment.
-
-# I. Module 1: SEE 100 - Modern Software Development Environment
+# SEE 100: Modern Software Development Environment
 
 ## Week 1: Overview of Modern Software Development
-- Evolution of Software Development, Modern Development Practices and Tools
-- Integrated Development Environments (IDEs)
+- **Evolution of Software Development**
+- **Modern Development Practices and Tools**
+- **Integrated Development Environments (IDEs)**
   - Features of Modern IDEs
   - Comparison of Popular IDEs (e.g., Visual Studio, IntelliJ IDEA)
 
 ## Week 2: Version Control Systems
-- Advanced Use of Git, Collaborative Features of GitHub, GitLab
-- Code Quality and Review Practices
-  - Code Review Techniques, Static Code Analysis Tools, Coding Standards
-  - Conducting Code Reviews, Using Static Analysis Tools
+- **Advanced Use of Git**
+- **Collaborative Features of GitHub, GitLab**
+- **Code Quality and Review Practices**
+  - Code Review Techniques
+  - Static Code Analysis Tools
+  - Coding Standards
+  - Conducting Code Reviews
+  - Using Static Analysis Tools
 
 ## Week 3: Continuous Integration and Continuous Deployment (CI/CD)
-- CI/CD Pipelines, Jenkins, Travis CI, GitHub Actions
-- Setting Up a CI/CD Pipeline
-- Containerization and Virtualization
+- **CI/CD Pipelines** (Jenkins, Travis CI, GitHub Actions)
+- **Setting Up a CI/CD Pipeline**
+- **Containerization and Virtualization**
   - Docker, Kubernetes, Virtual Machines
-  - Creating and Managing Containers, Setting Up a Kubernetes Cluster
+  - Creating and Managing Containers
+  - Setting Up a Kubernetes Cluster
 
 ## Week 4: Cloud Computing and Cloud-Based Development
-- Overview of Cloud Platforms (AWS, Azure, Google Cloud), Cloud Development Models
-- Deploying Applications on Cloud Platforms
-- Agile and DevOps Practices
-  - Agile Methodologies, DevOps Culture and Practices
+- **Overview of Cloud Platforms** (AWS, Azure, Google Cloud)
+- **Cloud Development Models**
+- **Deploying Applications on Cloud Platforms**
+- **Agile and DevOps Practices**
+  - Agile Methodologies
+  - DevOps Culture and Practices
   - Implementing Agile and DevOps in Project Management
-- Modern Front-End Technologies
+- **Modern Front-End Technologies**
   - Front-End Frameworks and Libraries (e.g., React, Angular, Vue.js)
   - Building a Small Project Using a Modern Front-End Framework
 
 ## Week 5: Backend Development and APIs
-- RESTful APIs, Microservices Architecture, Node.js, Python
-- Developing a Backend Service and API
-- Database Technologies
-  - SQL vs. NoSQL, Database Management Systems (e.g., MySQL, MongoDB)
-- Task: Building a Full-Stack Application
+- **RESTful APIs, Microservices Architecture**
+- **Node.js, Python**
+- **Developing a Backend Service and API**
+- **Database Technologies**
+  - SQL vs. NoSQL
+  - Database Management Systems (e.g., MySQL, MongoDB)
+- **Task: Building a Full-Stack Application**
   - Utilizing Modern Software Development Tools and Practices
   - End-to-end development of a Full-Stack Application
 
-# II. Module 2: SEE 101 - Web Development
+---
+
+# SEE 101: Web Development
 
 ## Week 1: Introduction to HTML5
-- Basic Structure of a Web Page, Tags, Elements, and Attributes
-- Creating a Simple HTML Page
-- Advanced HTML5 Features
+- **Basic Structure of a Web Page**
+  - Tags, Elements, and Attributes
+  - Creating a Simple HTML Page
+- **Advanced HTML5 Features**
   - Forms, Tables, Semantic HTML
   - Building a Contact Form
-- Introduction to CSS3
+- **Introduction to CSS3**
   - Basics of CSS, Selectors, Box Model
   - Styling HTML Page with CSS
 
 ## Week 2: Advanced CSS3 Techniques
-- Layouts, Flexbox, Grid System
-- Creating a Responsive Layout
-- CSS3 Animations and Transitions
+- **Layouts, Flexbox, Grid System**
+  - Creating a Responsive Layout
+- **CSS3 Animations and Transitions**
   - Animations, Transitions, Transformations
   - Animating Web Elements
-- Introduction to JavaScript
+- **Introduction to JavaScript**
   - Syntax, Variables, Data Types
   - Interactive JavaScript Exercises
 
 ## Week 3: JavaScript Control Structures
-- Loops, Conditionals, Functions
-- Building a Simple Calculator
-- The Document Object Model (DOM)
+- **Loops, Conditionals, Functions**
+  - Building a Simple Calculator
+- **The Document Object Model (DOM)**
   - DOM Manipulation, Event Listeners
   - Creating Interactive Web Pages
-- Advanced JavaScript Techniques
+- **Advanced JavaScript Techniques**
   - AJAX, Fetch API, JSON
   - Working with External Data
-- Introduction to Responsive Web Design
+- **Introduction to Responsive Web Design**
   - Media Queries, Mobile-First Design
   - Building a Responsive Website
 
-## Week 4: Web Development Best Practices
-- Web Accessibility
-  - Accessibility Principles, ARIA
+## Week 4: Web Accessibility
+- **Accessibility Principles, ARIA**
   - Making a Website Accessible
-- Web Performance Optimization
+- **Web Performance Optimization**
   - Page Speed, Optimization Techniques
   - Analyzing and Optimizing a Web Page
-- Version Control with Git and GitHub
+- **Version Control with Git and GitHub**
   - Basics of Git, Repository Management
   - Managing Web Projects with Git
-- Introduction to Front-End Frameworks
+- **Introduction to Front-End Frameworks**
   - Overview of Popular Frameworks (Bootstrap, React)
   - Building a Sample Page with Bootstrap
 
 ## Week 5: JavaScript Frameworks: React
-- React Basics, Components, JSX
-- Creating a Simple React Application
-- Advanced React Techniques
+- **React Basics**
+  - Components, JSX
+  - Creating a Simple React Application
+- **Advanced React Techniques**
   - State Management, Hooks
   - Developing a Dynamic Web App
-- Final Project Work
+- **Final Project Work**
   - Applying All Learned Concepts
   - Developing a Comprehensive Web Project
-- Project Presentations and Course Wrap-Up
+- **Project Presentations and Course Wrap-Up**
   - Presenting Final Projects
   - Peer Review, Feedback Sessions
 
-# III. Module 3: SEE 102 - Mobile Application Design and Development
+---
 
-## Week 1: Introduction to Android and Setup
-- Android Ecosystem, Installing Android Studio, Understanding SDKs
-- Setting up a Development Environment
-- Basic Android App Development
-  - Activities, Intents, Basic UI Elements
-  - Building a Simple Android App
+# SEE 102: Mobile Application Design and Development
 
-## Week 2: Advanced UI Development in Android
-- Custom Views, RecyclerView, Material Design Principles
-- Designing a Complex User Interface
-- Android Data Management
-  - SQLite, Shared Preferences, Content Providers
-  - Implementing Data Storage Solutions
+## Week 1: Introduction to Mobile Development with React Native
+- **React Native Overview**
+- **Installing Expo and React Native CLI**
+- **Setting Up a Development Environment**
+- **Basic React Native Components**
+  - Views, Text, Buttons, Images
+  - Building a Simple Mobile App
 
-## Week 3: Networking and APIs in Android
-- RESTful APIs, JSON Parsing, Networking Libraries (Retrofit, Volley)
-- Integrating Third-party APIs
-- Android App Testing and Debugging
-  - Unit Testing, UI Testing, Debugging Techniques
-  - Writing and Running Tests
+## Week 2: Advanced UI Development in React Native
+- **Custom Components and Styling**
+- **React Native Navigation**
+- **State Management with Context API and Redux**
+- **Designing a Complex User Interface**
 
-## Week 4: Introduction to React Native
-- React Native Overview and Environment Setup
-  - Setting up React Native CLI and Expo
-  - Understanding the differences between CLI and Expo
-- React Native Basics
-  - Components, Props, State
-  - Navigation and Basic UI Elements
-  - Building a Simple Cross-Platform App
+## Week 3: Networking and APIs in React Native
+- **RESTful APIs, JSON Parsing**
+- **Networking Libraries (Axios, Fetch API)**
+- **Integrating Third-Party APIs**
+- **Authentication and Authorization**
+  - Firebase Authentication
+  - JWT-based Authentication
 
-## Week 5: Advanced React Native Development
-- Advanced Component Patterns
-  - Custom Components
-  - Hooks and State Management
-  - Platform-Specific Code
-- Data Management in React Native
-  - Local Storage
-  - API Integration
-  - State Management Solutions (Redux/Context)
-- App Deployment and Testing
-  - Testing React Native Apps
-  - Publishing to App Stores
-  - CI/CD for Mobile Apps
-- Final Project and Evaluation
-  - Development of a Comprehensive Mobile Application
-  - Applying Concepts Learned
-  - Final Project Development and Presentation
+## Week 4: Testing and Debugging in React Native
+- **Unit Testing, UI Testing**
+- **Debugging Techniques**
+- **Using React Native Debugger and Flipper**
+- **Performance Optimization**
+  - Reducing Bundle Size
+  - Improving Rendering Performance
+
+## Week 5: Final Project and Evaluation
+- **Development of a Comprehensive Mobile Application**
+- **Applying Concepts Learned**
+- **Final Project Development**
+- **Deploying React Native Apps**
+  - Expo Go and EAS Build
+  - Publishing to Google Play Store and Apple App Store**
