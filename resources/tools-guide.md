@@ -18,3 +18,4 @@
 - Navigation
 - File operations
 ```
+https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/github-education-for-students/apply-to-github-education-as-a-student
