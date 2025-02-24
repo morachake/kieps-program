@@ -1,0 +1,70 @@
+name: Day 1 Assignment Check
+
+on:
+  push:
+    paths:
+      - 'day-1-assignment/**'
+
+jobs:
+  check-assignment:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    
+    - name: Check for Hello World program
+      run: |
+        if [ -f day-1-assignment/hello_world.py ]; then
+          output=$(python day-1-assignment/hello_world.py)
+          if [ "$output" == "Hello, World!" ]; then
+            echo "Hello World program found and runs correctly!"
+          else
+            echo "Hello World program found but output is incorrect."
+            exit 1
+          fi
+        elif [ -f day-1-assignment/HelloWorld.java ]; then
+          javac day-1-assignment/HelloWorld.java
+          output=$(java -cp day-1-assignment HelloWorld)
+          if [ "$output" == "Hello, World!" ]; then
+            echo "Hello World program found and runs correctly!"
+          else
+            echo "Hello World program found but output is incorrect."
+            exit 1
+          fi
+        else
+          echo "No Hello World program found."
+          exit 1
+        fi
+    
+    - name: Check for reflection
+      run: |
+        if [ -f day-1-assignment/REFLECTION.md ]; then
+          word_count=$(wc -w < day-1-assignment/REFLECTION.md)
+          if [ $word_count -ge 100 ] && [ $word_count -le 150 ]; then
+            echo "Reflection found with correct word count!"
+          else
+            echo "Reflection found but word count is not between 100-150 words."
+            exit 1
+          fi
+        else
+          echo "No reflection file found."
+          exit 1
+        fi
+
+    - name: Assignment Completion
+      if: success()
+      run: |
+        echo "Congratulations! Your Day 1 assignment has been completed successfully."
+        echo "Great job on setting up your development environment and creating your first program!"
+
+    - name: Assignment Incomplete
+      if: failure()
+      run: |
+        echo "It looks like there might be some issues with your assignment submission."
+        echo "Please check the error messages above and make sure you've completed all parts of the assignment."
+        echo "Don't hesitate to ask for help if you're stuck!"
+
