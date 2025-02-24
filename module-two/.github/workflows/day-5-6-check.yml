@@ -1,0 +1,82 @@
+name: Days 5-6 Assignment Check
+
+on:
+  push:
+    paths:
+      - 'todo-list/**'
+
+jobs:
+  check-assignment:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Install dependencies
+      run: |
+        cd todo-list
+        npm ci
+    
+    - name: Check for TodoList component
+      run: |
+        if grep -q "class TodoList extends React.Component" todo-list/src/components/TodoList.js; then
+          echo "TodoList component found!"
+        else
+          echo "Missing TodoList component or not a class component."
+          exit 1
+        fi
+
+    - name: Check for state usage
+      run: |
+        if grep -q "this.state" todo-list/src/components/TodoList.js; then
+          echo "State usage found!"
+        else
+          echo "Missing state usage."
+          exit 1
+        fi
+
+    - name: Check for event handlers
+      run: |
+        if grep -q "handleAdd" todo-list/src/components/TodoList.js && grep -q "handleToggle" todo-list/src/components/TodoList.js && grep -q "handleDelete" todo-list/src/components/TodoList.js; then
+          echo "Event handlers found!"
+        else
+          echo "Missing event handlers."
+          exit 1
+        fi
+
+    - name: Check for styled-components
+      run: |
+        if grep -q "import styled from 'styled-components'" todo-list/src/components/TodoList.js; then
+          echo "styled-components usage found!"
+        else
+          echo "Missing styled-components usage."
+          exit 1
+        fi
+
+    - name: Run tests
+      run: |
+        cd todo-list
+        npm test -- --watchAll=false
+
+    - name: Build project
+      run: |
+        cd todo-list
+        npm run build
+
+    - name: Assignment Completion
+      if: success()
+      run: |
+        echo "Excellent work! Your Days 5-6 assignment has been completed successfully."
+        echo "You've created a todo list application using React state and events."
+
+    - name: Assignment Incomplete
+      if: failure()
+      run: |
+        echo "It seems there are some issues with your assignment submission."
+        echo "Please review the error messages above and ensure you've implemented all required features."
+        echo "If you need any help or clarification, don't hesitate to ask!"
+

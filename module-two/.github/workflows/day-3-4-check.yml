@@ -1,0 +1,82 @@
+name: Days 3-4 Assignment Check
+
+on:
+  push:
+    paths:
+      - 'product-catalog/**'
+
+jobs:
+  check-assignment:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Install dependencies
+      run: |
+        cd product-catalog
+        npm ci
+    
+    - name: Check for Product component
+      run: |
+        if grep -q "function Product" product-catalog/src/components/Product.js; then
+          echo "Product component found!"
+        else
+          echo "Missing Product component."
+          exit 1
+        fi
+
+    - name: Check for ProductList component
+      run: |
+        if grep -q "function ProductList" product-catalog/src/components/ProductList.js; then
+          echo "ProductList component found!"
+        else
+          echo "Missing ProductList component."
+          exit 1
+        fi
+
+    - name: Check for PropTypes
+      run: |
+        if grep -q "PropTypes" product-catalog/src/components/Product.js && grep -q "PropTypes" product-catalog/src/components/ProductList.js; then
+          echo "PropTypes implemented!"
+        else
+          echo "Missing PropTypes implementation."
+          exit 1
+        fi
+
+    - name: Check for CSS modules
+      run: |
+        if [ -f product-catalog/src/components/Product.module.css ] && [ -f product-catalog/src/components/ProductList.module.css ]; then
+          echo "CSS modules found!"
+        else
+          echo "Missing CSS modules."
+          exit 1
+        fi
+
+    - name: Run tests
+      run: |
+        cd product-catalog
+        npm test -- --watchAll=false
+
+    - name: Build project
+      run: |
+        cd product-catalog
+        npm run build
+
+    - name: Assignment Completion
+      if: success()
+      run: |
+        echo "Great job! Your Days 3-4 assignment has been completed successfully."
+        echo "You've created a product catalog using React components and props."
+
+    - name: Assignment Incomplete
+      if: failure()
+      run: |
+        echo "It looks like there might be some issues with your assignment submission."
+        echo "Please review the error messages above and make sure you've completed all parts of the assignment."
+        echo "Don't hesitate to ask for help if you're stuck!"
+

@@ -1,0 +1,65 @@
+name: Days 6-8 Cloud and Front-End CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  backend-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v0
+      with:
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        export_default_credentials: true
+    
+    - name: Deploy to Cloud Run
+      run: |
+        gcloud run deploy myapp --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/myapp:latest --platform managed --region us-central1
+
+  frontend-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build
+      run: npm run build
+    
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v1.2
+      with:
+        publish-dir: './build'
+        production-branch: main
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        deploy-message: "Deploy from GitHub Actions"
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+
+    - name: Assignment Completion
+      if: success()
+      run: |
+        echo "Great job! Your Days 6-8 assignment has been completed successfully."
+        echo "You've deployed both backend and frontend applications!"
+
+    - name: Assignment Incomplete
+      if: failure()
+      run: |
+        echo "It looks like there might be some issues with your cloud deployment or front-end application."
+        echo "Please check the error messages above and make sure you've completed all parts of the assignment."
+        echo "Don't hesitate to ask for help if you're stuck!"
+

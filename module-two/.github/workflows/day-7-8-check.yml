@@ -1,0 +1,73 @@
+name: Days 7-8 Assignment Check
+
+on:
+  push:
+    paths:
+      - 'weather-dashboard/**'
+
+jobs:
+  check-assignment:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Install dependencies
+      run: |
+        cd weather-dashboard
+        npm ci
+    
+    - name: Check for functional components and hooks
+      run: |
+        if grep -q "function WeatherDashboard" weather-dashboard/src/components/WeatherDashboard.js && grep -q "useState" weather-dashboard/src/components/WeatherDashboard.js && grep -q "useEffect" weather-dashboard/src/components/WeatherDashboard.js; then
+          echo "Functional components and hooks found!"
+        else
+          echo "Missing functional components or hooks."
+          exit 1
+        fi
+
+    - name: Check for custom hook
+      run: |
+        if [ -f weather-dashboard/src/hooks/useWeatherApi.js ] && grep -q "function useWeatherApi" weather-dashboard/src/hooks/useWeatherApi.js; then
+          echo "Custom hook found!"
+        else
+          echo "Missing custom hook."
+          exit 1
+        fi
+
+    - name: Check for API integration
+      run: |
+        if grep -q "axios.get" weather-dashboard/src/hooks/useWeatherApi.js || grep -q "fetch(" weather-dashboard/src/hooks/useWeatherApi.js; then
+          echo "API integration found!"
+        else
+          echo "Missing API integration."
+          exit 1
+        fi
+
+    - name: Run tests
+      run: |
+        cd weather-dashboard
+        npm test -- --watchAll=false
+
+    - name: Build project
+      run: |
+        cd weather-dashboard
+        npm run build
+
+    - name: Assignment Completion
+      if: success()
+      run: |
+        echo "Great job! Your Days 7-8 assignment has been completed successfully."
+        echo "You've created a weather dashboard using React hooks and custom hooks."
+
+    - name: Assignment Incomplete
+      if: failure()
+      run: |
+        echo "It looks like there might be some issues with your assignment submission."
+        echo "Please review the error messages above and make sure you've completed all parts of the assignment."
+        echo "Don't hesitate to ask for help if you're stuck!"
+

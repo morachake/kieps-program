@@ -1,0 +1,59 @@
+name: Days 2-3 Assignment Check
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - '*.md'
+
+jobs:
+  check-assignment:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Install markdownlint
+      run: npm install -g markdownlint-cli
+    
+    - name: Check Markdown files
+      run: markdownlint '*.md'
+    
+    - name: Check for new chapter
+      run: |
+        if ls *-chapter.md 1> /dev/null 2>&1; then
+          echo "New chapter file found!"
+        else
+          echo "No new chapter file found."
+          exit 1
+        fi
+    
+    - name: Check pull request
+      run: |
+        pr_files=$(gh pr view ${{ github.event.pull_request.number }} --json files -q '.files[].path')
+        if echo "$pr_files" | grep -q "chapter.md"; then
+          echo "Pull request includes a new chapter file."
+        else
+          echo "Pull request does not include a new chapter file."
+          exit 1
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Assignment Completion
+      if: success()
+      run: |
+        echo "Great job! Your Days 2-3 assignment has been completed successfully."
+        echo "You've demonstrated good use of Git, GitHub, and Markdown linting."
+
+    - name: Assignment Incomplete
+      if: failure()
+      run: |
+        echo "It looks like there might be some issues with your assignment submission."
+        echo "Please check the error messages above and make sure you've completed all parts of the assignment."
+        echo "Don't hesitate to ask for help if you're stuck!"
+

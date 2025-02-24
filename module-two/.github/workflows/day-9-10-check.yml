@@ -1,0 +1,82 @@
+name: Days 9-10 Assignment Check
+
+on:
+  push:
+    paths:
+      - 'quiz-app/**'
+
+jobs:
+  check-assignment:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Install dependencies
+      run: |
+        cd quiz-app
+        npm ci
+    
+    - name: Check for TypeScript usage
+      run: |
+        if [ -f quiz-app/tsconfig.json ] && grep -q "strict" quiz-app/tsconfig.json; then
+          echo "TypeScript configuration found!"
+        else
+          echo "Missing or incorrect TypeScript configuration."
+          exit 1
+        fi
+
+    - name: Check for interfaces and types
+      run: |
+        if grep -q "interface" quiz-app/src/types/quiz.ts && grep -q "type" quiz-app/src/types/quiz.ts; then
+          echo "Interfaces and types found!"
+        else
+          echo "Missing interfaces or types."
+          exit 1
+        fi
+
+    - name: Check for functional components with TypeScript
+      run: |
+        if grep -q "React.FC<" quiz-app/src/components/Quiz.tsx && grep -q "React.FC<" quiz-app/src/components/Question.tsx; then
+          echo "Functional components with TypeScript found!"
+        else
+          echo "Missing functional components with TypeScript."
+          exit 1
+        fi
+
+    - name: Check for styled-components usage
+      run: |
+        if grep -q "import styled from 'styled-components'" quiz-app/src/components/Quiz.tsx; then
+          echo "styled-components usage found!"
+        else
+          echo "Missing styled-components usage."
+          exit 1
+        fi
+
+    - name: Run tests
+      run: |
+        cd quiz-app
+        npm test -- --watchAll=false
+
+    - name: Build project
+      run: |
+        cd quiz-app
+        npm run build
+
+    - name: Assignment Completion
+      if: success()
+      run: |
+        echo "Excellent work! Your Days 9-10 assignment has been completed successfully."
+        echo "You've created a quiz application using React with TypeScript."
+
+    - name: Assignment Incomplete
+      if: failure()
+      run: |
+        echo "It seems there are some issues with your assignment submission."
+        echo "Please review the error messages above and ensure you've implemented all required features using TypeScript."
+        echo "If you need any help or clarification, don't hesitate to ask!"
+

@@ -1,0 +1,73 @@
+name: Days 1-2 Assignment Check
+
+on:
+  push:
+    paths:
+      - 'my-first-react-app/**'
+
+jobs:
+  check-assignment:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Use Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+    
+    - name: Install dependencies
+      run: |
+        cd my-first-react-app
+        npm ci
+    
+    - name: Check for Greeting component
+      run: |
+        if grep -q "function Greeting" my-first-react-app/src/Greeting.js; then
+          echo "Greeting component found!"
+        else
+          echo "Missing Greeting component."
+          exit 1
+        fi
+
+    - name: Check for Hobbies component
+      run: |
+        if grep -q "function Hobbies" my-first-react-app/src/Hobbies.js; then
+          echo "Hobbies component found!"
+        else
+          echo "Missing Hobbies component."
+          exit 1
+        fi
+
+    - name: Check for components in App.js
+      run: |
+        if grep -q "<Greeting" my-first-react-app/src/App.js && grep -q "<Hobbies" my-first-react-app/src/App.js; then
+          echo "Components used in App.js!"
+        else
+          echo "Components not properly used in App.js."
+          exit 1
+        fi
+
+    - name: Run tests
+      run: |
+        cd my-first-react-app
+        npm test -- --watchAll=false
+
+    - name: Build project
+      run: |
+        cd my-first-react-app
+        npm run build
+
+    - name: Assignment Completion
+      if: success()
+      run: |
+        echo "Great job! Your Days 1-2 assignment has been completed successfully."
+        echo "You've created your first React application with custom components."
+
+    - name: Assignment Incomplete
+      if: failure()
+      run: |
+        echo "It looks like there might be some issues with your assignment submission."
+        echo "Please review the error messages above and make sure you've completed all parts of the assignment."
+        echo "Don't hesitate to ask for help if you're stuck!"
+
